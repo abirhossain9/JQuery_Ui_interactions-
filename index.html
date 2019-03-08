@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--CSS Links -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>JQuery Ui Interactions</title>
+  </head>
+  <body>
+  <!-- draggable start -->
+  <section class="div1 text-center">
+<div id="draggablee" class="ui-widget-content">
+  <p>Drag me around. I am draggable</p>
+</div>
+</section>
+<!-- auto scroll -->
+<section class="div1">
+  
+<div id="draggable" class="ui-widget-content text-center">
+  <p>Scroll set to true, default settings</p>
+</div>
+ 
+<div id="draggable2" class="ui-widget-content text-center">
+  <p>scrollSensitivity set to 100</p>
+</div>
+ 
+<div id="draggable3" class="ui-widget-content text-center">
+  <p>scrollSpeed set to 100</p>
+</div>
+</section>
+
+<!-- drag and drop -->
+<section class="div2 text-center">
+  <h2>Drag and drop</h2>
+  <div id="draggable4" class="ui-widget-content">
+  <h5>Drag me to my target</h5>
+</div>
+ 
+<div id="droppable4" class="ui-widget-header">
+  <h5>Drop here</h5>
+</div>
+</section>
+<!-- drag and drop and not dropable-->
+<section class="div2 text-center">
+  <h2>Drag and drop not dropable</h2>
+  <div id="draggable-nonvalid" class="ui-widget-content">
+  <p>I'm draggable but can't be dropped</p>
+</div>
+ 
+<div id="draggable5" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div>
+ 
+<div id="droppable5" class="ui-widget-header">
+  <p>accept: '#draggable'</p>
+</div>
+<!-- resizable -->
+</section>
+<section class="div1 text-center">
+  <h1>Its resizable</h1>
+  <div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+</section>
+
+ <!-- resizable animate-->
+ <section class="div1 text-center">
+  <h1>Its resizable with animation</h1>
+<div id="resizableA" class="ui-widget-content">
+  <h3 class="ui-widget-header">Animate</h3>
+</div>
+</section>
+
+<!-- selectable start -->
+<section class="div2 text-center">
+  <h1>selectable</h1>
+  <ol id="selectable">
+  <li class="ui-widget-content">Item 1</li>
+  <li class="ui-widget-content">Item 2</li>
+  <li class="ui-widget-content">Item 3</li>
+  <li class="ui-widget-content">Item 4</li>
+  <li class="ui-widget-content">Item 5</li>
+  <li class="ui-widget-content">Item 6</li>
+  <li class="ui-widget-content">Item 7</li>
+</ol>
+</section>
+<!-- selectable end -->
+
+<!-- sortable start -->
+<section class="div2 text-center">
+  <h1>Sortabel</h1>
+  <ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+</section>
+<!-- connect lists -->
+
+<section class="div2 text-center">
+  <h1>Sortabel and linkable</h1>
+  <ul id="sortable1" class="connectedSortable">
+  <li class="ui-state-default">Item 1</li>
+  <li class="ui-state-default">Item 2</li>
+  <li class="ui-state-default">Item 3</li>
+  <li class="ui-state-default">Item 4</li>
+  <li class="ui-state-default">Item 5</li>
+</ul>
+ 
+<ul id="sortable2" class="connectedSortable">
+  <li class="ui-state-highlight">Item 1</li>
+  <li class="ui-state-highlight">Item 2</li>
+  <li class="ui-state-highlight">Item 3</li>
+  <li class="ui-state-highlight">Item 4</li>
+  <li class="ui-state-highlight">Item 5</li>
+</ul>
+</section>
+
+
+ 
+    <!-- jQuery links-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- for draggabel -->
+    <script>
+  $( function() {
+    $( "#draggablee" ).draggable();
+  } );
+  </script>
+  <!-- for auto scroll -->
+   <script>
+  $( function() {
+    $( "#draggable" ).draggable({ scroll: true });
+    $( "#draggable2" ).draggable({ scroll: true, scrollSensitivity: 100 });
+    $( "#draggable3" ).draggable({ scroll: true, scrollSpeed: 100 });
+  } );
+  </script>
+  <!-- dragggable start -->
+   <script>
+  $( function() {
+    $( "#draggable4" ).draggable();
+    $( "#droppable4" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "h5" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script>
+  <!-- drag and drop and not dropable-->
+  <script>
+  $( function() {
+    $( "#draggable5, #draggable-nonvalid" ).draggable();
+    $( "#droppable5" ).droppable({
+      accept: "#draggable5",
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      },
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script>
+  <!-- resizable -->
+  <script>
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+  </script>
+    <script>
+  $( function() {
+    $( "#resizableA" ).resizable({
+      animate: true
+    });
+  } );
+  </script>
+  <!-- selectabel -->
+  <script>
+  $( function() {
+    $( "#selectable" ).selectable();
+  } );
+  </script>
+  <!-- selectable display as grid -->
+   <script>
+  $( function() {
+    $( "#selectable2" ).selectable();
+  } );
+  </script>
+  <!-- sortable start -->
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+   <script>
+  $( function() {
+    $( "#sortable1, #sortable2" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  } );
+  </script>
+  </body>
+</html>

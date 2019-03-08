@@ -1,0 +1,66 @@
+.div1
+{
+border: 1px solid;
+margin-bottom: 30px;
+min-height: 110px;
+}
+.div2
+{
+border: 1px solid;
+margin-bottom: 30px;
+min-height: 300px;
+}
+#draggablee
+{
+width: 150px;
+height: 150px;
+padding: 0.5em;
+background-color: yellow;
+}
+#draggable, #draggable2, #draggable3
+{
+width: 100px;
+height: 100px;
+padding: 0.5em;
+float: left;
+margin: 0 10px 10px 0;
+background-color: tomato;
+}
+#draggable4 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; background-color: yellow}
+#droppable4 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; background-color: tomato; }
+#droppable5 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px;background-color: orange; }
+#draggable5, #draggable-nonvalid { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; background-color: red; }
+#resizable { width: 150px; height: 150px; padding: 0.5em; background-color: pink; }
+#resizable h3 { text-align: center; margin: 0; }
+#resizableA { width: 150px; height: 150px; padding: 0.5em; background-color: pink;}
+#resizableA h3 { text-align: center; margin: 0; }
+/*selectable*/
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: aqua; }
+#selectable .ui-selected { background: #F39814; color: aqua; }
+
+/*selectable end*/
+
+/*sortable start*/
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%;  }
+#sortable li { /*margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px;*/background-color: aqua; }
+/*#sortable li span {  margin-left: -1.3em; }*/
+/*sortable end*/
+#sortable1, #sortable2 {
+    border: 1px solid #eee;
+    width: 142px;
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+    background-color: aqua;
+  }
+  #sortable1 li, #sortable2 li {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 120px;
+    background-color: yellow;
+  }
